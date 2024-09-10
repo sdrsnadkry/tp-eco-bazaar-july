@@ -1,0 +1,38 @@
+import Image from "next/image";
+
+import { ArrowDownIcon, Location } from "@/assets/icons";
+
+export default function Home() {
+  return (
+    <div>
+      <header className="py-3 border-b-2 border-[#E6E6E6]">
+        <div className="flex justify-between container mx-auto">
+          <div className="flex items-center">
+            <Image src={Location} alt="Location" />
+            <span className="ml-2">
+              Store Location: Lincoln- 344, Illinois, Chicago, USA
+            </span>
+          </div>
+
+          <div className="flex items-center">
+            <div className="flex items-center border-r-2 border-[#E6E6E6] pr-5">
+              <div className="flex items-center">
+                <span className="mr-[6px]">Eng</span>
+                <Image src={ArrowDownIcon} alt="arrow down" />
+              </div>
+              <div className="flex items-center ml-5">
+                <span className="mr-[6px]">USD</span>
+                <Image src={ArrowDownIcon} alt="arrow down" />
+              </div>
+            </div>
+            <div className="ml-5">
+              <span>Sign In</span>
+              <span className="mx-1">/</span>
+              <span>Sign Up</span>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  );
+}
