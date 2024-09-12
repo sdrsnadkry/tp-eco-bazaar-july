@@ -11,6 +11,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'slider-bg': 'url("/slider.png")'
+      }
     },
   },
   plugins: [],
