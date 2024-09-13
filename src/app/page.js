@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { Logo, Slider } from "@/assets/images";
+import { Logo } from "@/assets/images";
 import {
   ArrowDownIcon,
   CartIcon,
@@ -12,19 +12,7 @@ import {
   RightArrowIcon,
   SearchIcon,
 } from "@/assets/icons";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-import ReactSlider from "react-slick";
-
-var settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
+import Slider from "@/_components/slider";
 
 export default function Home() {
   return (
@@ -139,73 +127,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="container mx-auto bg-[#EDF2EE] rounded-lg mt-6 ">
-        <ReactSlider {...settings}>
-          <div>
-            <div className="flex items-center  px-[6.25rem] py-[11.375rem] ">
-              <div className="flex-1">
-                <p className="text-[0.875rem] text-[#00B207] font-medium">
-                  Welcome to shopery
-                </p>
-                <h className="mt-2 text-[4.5rem] font-semibold leading-[5.4rem]">
-                  Fresh & Healthy Organic Food
-                </h>
-                <p className="mt-7 text-[2rem] font-semibold">
-                  Sale up to{" "}
-                  <span className="text-[#ff8a00] font-bold">30% OFF</span>{" "}
-                </p>
-                <p className="mt-3 text-[0.875rem] text-[#808080]">
-                  Free shipping on all your order. we deliver, you enjoy
-                </p>
-
-                <button className="flex items-center mt-8 text-[1rem] font-semibold py-4 px-10 bg-[#00B207] rounded-[3.3125rem] text-white">
-                  Shop now
-                  <Image
-                    src={RightArrowIcon}
-                    alt="right-arrow"
-                    className="w-4 h-4 ml-4"
-                  />
-                </button>
-              </div>
-              <div className="flex-[1]">
-                <Image src={Slider} alt="slider" className=" object-contain" />
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="flex px-[6.25rem] py-[11.375rem] ">
-              <div className="flex-1">
-                <p className="text-[0.875rem] text-[#00B207] font-medium">
-                  Welcome to shopery
-                </p>
-                <h className="mt-2 text-[4.5rem] font-semibold leading-[5.4rem]">
-                  Fresh & Healthy Organic Food
-                </h>
-                <p className="mt-7 text-[2rem] font-semibold">
-                  Sale up to{" "}
-                  <span className="text-[#ff8a00] font-bold">30% OFF</span>{" "}
-                </p>
-                <p className="mt-3 text-[0.875rem] text-[#808080]">
-                  Free shipping on all your order. we deliver, you enjoy
-                </p>
-
-                <button className="flex items-center mt-8 text-[1rem] font-semibold py-4 px-10 bg-[#00B207] rounded-[3.3125rem] text-white">
-                  Shop now
-                  <Image
-                    src={RightArrowIcon}
-                    alt="right-arrow"
-                    className="w-4 h-4 ml-4"
-                  />
-                </button>
-              </div>
-              <div className="flex-1">
-                <Image src={Slider} alt="slider" className=" object-contain" />
-              </div>
-            </div>
-          </div>
-        </ReactSlider>
-      </section>
+      <Slider />
     </main>
   );
 }
