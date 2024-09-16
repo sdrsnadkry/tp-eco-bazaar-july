@@ -60,7 +60,7 @@ const Slider = () => {
 
   return (
     <div className="mb-52">
-      <section className="container mx-auto bg-[#EDF2EE] rounded-lg mt-6 relative">
+      <section className="container mx-auto bg-gray-50 rounded-lg mt-6 relative">
         <ReactSlider
           ref={sliderRef}
           {...settings}
@@ -72,7 +72,7 @@ const Slider = () => {
             <div key={sliderItem.id}>
               <div className="flex items-center  px-[6.25rem] py-[11.375rem] ">
                 <div className="flex-1">
-                  <p className="text-[0.875rem] text-[#00B207] font-medium">
+                  <p className="text-[0.875rem] text-primary font-medium">
                     {sliderItem.title}
                   </p>
                   <h className="mt-2 text-[4.5rem] font-semibold leading-[5.4rem]">
@@ -80,15 +80,15 @@ const Slider = () => {
                   </h>
                   <p className="mt-7 text-[2rem] font-semibold">
                     Sale up to{" "}
-                    <span className="text-[#ff8a00] font-bold">
+                    <span className="text-warning font-bold">
                       {sliderItem.discount}
                     </span>{" "}
                   </p>
-                  <p className="mt-3 text-[0.875rem] text-[#808080]">
+                  <p className="mt-3 text-[0.875rem] text-gray-500">
                     {sliderItem.description}
                   </p>
 
-                  <button className="flex items-center mt-8 text-[1rem] font-semibold py-4 px-10 bg-[#00B207] rounded-[3.3125rem] text-white">
+                  <button className="flex items-center mt-8 text-[1rem] font-semibold py-4 px-10 bg-primary rounded-[3.3125rem] text-white">
                     Shop now
                     <Image
                       src={RightArrowIcon}

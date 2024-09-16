@@ -1,3 +1,4 @@
+import Header from "@/_components/header";
 import "./globals.css";
 
 // const geistSans = localFont({
@@ -14,7 +15,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <Header />
+
+        {children}
+      </body>
     </html>
   );
 }
