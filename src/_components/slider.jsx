@@ -4,9 +4,37 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import ReactSlider from "react-slick";
-import { RightArrowIcon } from "@/assets/icons";
+import { RightArrowIcon, TruckIcon } from "@/assets/icons";
 import { Slider as SliderImage } from "@/assets/images";
 import Image from "next/image";
+import Service from "./service";
+
+const services = [
+  {
+    id: 1,
+    icon: TruckIcon,
+    title: "Free Shipping",
+    description: "Free shipping on all your order",
+  },
+  {
+    id: 2,
+    icon: TruckIcon,
+    title: "Customer Support 24/7",
+    description: "Instant access to Support",
+  },
+  {
+    id: 3,
+    icon: TruckIcon,
+    title: "100% Secure Payment",
+    description: "We ensure your money is save",
+  },
+  {
+    id: 4,
+    icon: TruckIcon,
+    title: "Money-Back Guarantee",
+    description: "30 Days Money-Back Guarantee",
+  },
+];
 
 var settings = {
   dots: false,
@@ -75,10 +103,10 @@ const Slider = () => {
                   <p className="text-[0.875rem] text-primary font-medium">
                     {sliderItem.title}
                   </p>
-                  <h className="mt-2 text-[4.5rem] font-semibold leading-[5.4rem]">
+                  <h className="mt-2 text-display-01 font-600 leading-[5.4rem]">
                     {sliderItem.subTitle}
                   </h>
-                  <p className="mt-7 text-[2rem] font-semibold">
+                  <p className="mt-7 text-heading-05 font-semibold">
                     Sale up to{" "}
                     <span className="text-warning font-bold">
                       {sliderItem.discount}
@@ -109,7 +137,20 @@ const Slider = () => {
           ))}
         </ReactSlider>
 
-        <Pagination activeIndex={activeIndex} moveToIndex={moveToIndex} />
+        <div className="absolute left-0 right-0 bottom-20">
+          <Pagination activeIndex={activeIndex} moveToIndex={moveToIndex} />
+        </div>
+
+        <div className="absolute -bottom-[4.0625rem] left-0 right-0 shadow-services grid grid-cols-4 bg-white max-w-[92%] mx-auto p-10 rounded-md ">
+          {services.map((service) => (
+            <Service
+              key={service.id}
+              title={service.title}
+              desc={service.description}
+              icon={service.icon}
+            />
+          ))}
+        </div>
       </section>
     </div>
   );
@@ -138,7 +179,9 @@ const PaginationDots = (props) => {
     <div
       onClick={() => props.moveToIndex(props.index)}
       className={`h-2 ${
-        props.active ? "w-4  bg-[#00B207] transition-[width] duration-50" : "w-2  bg-[#B4CCB4]"
+        props.active
+          ? "w-4  bg-[#00B207] transition-[width] duration-50"
+          : "w-2  bg-[#B4CCB4]"
       } rounded-full mx-1 cursor-pointer`}
     ></div>
   );

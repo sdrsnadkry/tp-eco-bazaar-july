@@ -5,5 +5,15 @@ import CartIcon from "./Cart.svg";
 import SearchIcon from "./Search.svg";
 import PhoneIcon from "./Phone.svg";
 import RightArrowIcon from "./RightArrow.svg";
+import TruckIcon from "./Truck.svg";
 
-export { Location, HeartIcon, ArrowDownIcon, CartIcon, SearchIcon, PhoneIcon,RightArrowIcon };
+export {
+  Location,
+  HeartIcon,
+  ArrowDownIcon,
+  CartIcon,
+  SearchIcon,
+  PhoneIcon,
+  RightArrowIcon,
+  TruckIcon,
+};
