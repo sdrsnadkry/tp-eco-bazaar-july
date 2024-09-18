@@ -7,6 +7,59 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        "display-01": [
+          "4.5rem",
+          {
+            lineHeight: "5.4rem",
+          },
+        ],
+        "heading-01": [
+          "3.5rem",
+          {
+            lineHeight: "4.2rem",
+          },
+        ],
+        "heading-02": [
+          "3rem",
+          {
+            lineHeight: "3.6rem",
+          },
+        ],
+        "heading-05": [
+          "2rem",
+          {
+            lineHeight: "2.4rem",
+          },
+        ],
+        "body-xxl": [
+          "1.5rem",
+          {
+            lineHeight: "2.25rem",
+          },
+        ],
+        "body-medium": [
+          "1rem",
+          {
+            lineHeight: "1.5rem",
+          },
+        ],
+        "body-small": [
+          "0.875rem",
+          {
+            lineHeight: "1.3125rem",
+          },
+        ],
+      },
+      fontWeight: {
+        "400": '400',
+        "500": '500',
+        "600": '600',
+        
+      },
+      boxShadow: {
+        services: "4px 12px 40px -10px rgba(0,38,3,0.08)",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
