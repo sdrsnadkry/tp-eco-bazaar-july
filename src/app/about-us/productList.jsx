@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const ProductList = () => {
-  const [searchText, setSearchText] = useState("");
+  // const [searchText, setSearchText] = useState("");
 
   const [products, setProducts] = useState([]);
 
@@ -23,7 +23,7 @@ const ProductList = () => {
     fetchProduct();
   }, []);
 
-  const handleSearch = () => {
+  const handleSearch = (searchText) => {
 
     const filteredProds = products.filter((val) => {
       return val.title.toLowerCase().includes(searchText.toLowerCase())
@@ -39,8 +39,7 @@ const ProductList = () => {
         <input
           type="text"
           className="border-2 border-slate-500"
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
+          onChange={(e) => handleSearch(e.target.value)}
         />
         <button onClick={handleSearch}>Search</button>
       </div>
